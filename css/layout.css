@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1600px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+.header .logo {
+  display: flex;
+  position: fixed;
+  left: 0px;
+  flex-shrink: 0;
+  width: 184px;
+}
+.header .gnb {
+  display: flex;
+}
+.header .gnb .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 100px;
+  font-size: 20px;
+}
+.header .gnb .list li {
+  padding: 0 40px;
+}
+.header .rbtn {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.header .rbtn .losi {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header .rbtn .losi .bar {
+  width: 1px;
+  height: 14px;
+  background-color: #fff;
+}
+.header .rbtn .Menu {
+  display: flex;
+}
+.header .rbtn .Menu span {
+  font-size: 32px;
+}
+
+.mainvisual {
+  width: 100%;
+  height: 100vh;
+}
+.mainvisual .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
