@@ -56,9 +56,19 @@
 }
 .header .rbtn .Menu {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34px;
+  height: 18px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
 .header .rbtn .Menu span {
-  font-size: 32px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
 }
 
 .mainvisual {
@@ -122,11 +132,11 @@
   transition-delay: 0.7s;
 }
 .mainvisual .visual-ctrl {
+  display: flex;
   position: absolute;
   top: calc(60% + 60px);
   left: 50%;
   z-index: 10;
-  display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -140,9 +150,9 @@
   width: 32px;
   height: 32px;
   padding: 0;
-  border-radius: 50%;
-  background: none;
   color: #fff;
+  background: none;
+  border-radius: 50%;
   cursor: pointer;
 }
 .mainvisual .visual-ctrl button span {
@@ -153,8 +163,8 @@
   font-variation-settings: "FILL" 1;
 }
 .mainvisual .visual-ctrl .swiper-pagination {
-  position: static;
   display: flex;
+  position: static;
   gap: 15px;
   width: auto;
   margin-right: 15px;
@@ -163,11 +173,155 @@
   width: 8px;
   height: 8px;
   margin: 0;
-  border-radius: 4px;
   background: #fff;
+  border-radius: 4px;
   opacity: 0.4;
   transition: opacity 0.3s;
 }
 .mainvisual .visual-ctrl .swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+.sec2 {
+  position: relative;
+  padding: 180px 0 160px;
+  background: url(../images/main/sec2_bg.jpg);
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sec2 .innerwrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 94%;
+  max-width: 1600px;
+  margin: 0px auto;
+}
+.sec2 .innerwrap .conarea {
+  width: 880px;
+  max-width: 58%;
+}
+.sec2 .innerwrap .conarea .txtarea {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.4em;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 1s;
+}
+.sec2 .innerwrap .conarea .txtarea .wht {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  padding: 0 10px;
+  font-weight: 600;
+  color: #fff;
+}
+.sec2 .innerwrap .conarea .txtarea .wht::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #000;
+  border-radius: 50px;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.8s ease 0.3s;
+}
+.sec2 .innerwrap .conarea .txtarea .wht.in-view::after {
+  transform: scaleX(1);
+}
+.sec2 .img {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+.sec2 .img.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+.sec2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sec2 .img1 {
+  aspect-ratio: 2.017/1;
+  margin-top: 110px;
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.sec2 .img2 {
+  width: 392px;
+  max-width: 36%;
+  aspect-ratio: 0.835/1;
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.sec3 {
+  position: relative;
+  padding: 160px;
+}
+.sec3 .bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 98%;
+  max-width: 1880px;
+  height: 100%;
+  overflow: hidden;
+  background: url(../images/main/sec3_bg.jpg);
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+}
+.sec3 .innerwrap .conarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 94%;
+  max-width: 1600px;
+  margin: 0px auto;
+  gap: 40px;
+}
+.sec3 .innerwrap .conarea .board {
+  width: 100%;
+}
+.sec3 .innerwrap .conarea .board h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.sec3 .innerwrap .conarea .board .boxwarp {
+  width: 100%;
+  height: 800px;
+  border-radius: 50px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.sec3 .innerwrap .conarea .board .boxwarp .inner .tag {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.sec3 .innerwrap .conarea .board .boxwarp .ym {
+  font-size: 16px;
+  font-weight: 400;
+}
+.sec3 .innerwrap .conarea .board .boxwarp .day {
+  font-size: 48px;
+  font-weight: 700;
 }

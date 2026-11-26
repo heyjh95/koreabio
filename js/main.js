@@ -29,3 +29,12 @@ pauseBtn.addEventListener("click", () => {
     pauseBtn.setAttribute("aria-label", "일시정지");
   }
 });
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("in-view");
+    });
+  },
+  { threshold: 0.3 },
+);
+document.querySelectorAll(".ani").forEach((el) => io.observe(el));
